@@ -2,7 +2,7 @@
   const menuToggle = document.querySelector(".js-menu-toggle");
   const menuPanel = document.querySelector(".js-menu-panel");
   const spotifyEmbed = document.querySelector(".spotify-embed");
-  const spotifyNote = document.querySelector(".menu-spotify-note");
+  const spotifyPlaceholder = document.querySelector(".spotify-placeholder");
 
   const normalizeSpotifyEmbedUrl = (value) => {
     const raw = String(value || "").trim();
@@ -47,10 +47,10 @@
     if (embedUrl) {
       spotifyEmbed.src = embedUrl;
       spotifyEmbed.hidden = false;
-      if (spotifyNote) spotifyNote.hidden = true;
+      if (spotifyPlaceholder) spotifyPlaceholder.hidden = true;
     } else {
       spotifyEmbed.hidden = true;
-      if (spotifyNote) spotifyNote.hidden = false;
+      if (spotifyPlaceholder) spotifyPlaceholder.hidden = false;
     }
   }
 
@@ -63,6 +63,7 @@
   const setPlayerOpen = (open) => {
     if (!player) return;
     player.hidden = !open;
+    document.body?.classList.toggle("player-open", open);
   };
 
   const escapeHtml = (value) =>
