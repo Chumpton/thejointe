@@ -85,21 +85,25 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: linear-gradient(
-    180deg,
-    rgba(251, 244, 228, 0.92),
-    rgba(243, 230, 200, 0.84)
-  );
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(8px);
+  background: transparent;
+  padding: 10px 0;
 }
 
 .header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 0;
+  padding: 10px 14px;
   gap: 16px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(251, 244, 228, 0.92),
+    rgba(243, 230, 200, 0.84)
+  );
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
 }
 
 .brand {
@@ -132,6 +136,20 @@ body::before {
   gap: 18px;
 }
 
+.nav-ic {
+  width: 16px;
+  height: 16px;
+  display: inline-grid;
+  place-items: center;
+  opacity: 0.9;
+}
+
+.nav-ic svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 .nav-link {
   color: rgba(10, 15, 11, 0.82);
   text-decoration: none;
@@ -139,9 +157,12 @@ body::before {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 12px;
-  padding: 10px 12px;
+  padding: 9px 12px;
   border-radius: 999px;
   transition: background 160ms ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-link:hover {
@@ -1002,7 +1023,8 @@ textarea:focus {
   .header-row {
     flex-wrap: wrap;
     gap: 10px;
-    padding: 10px 0;
+    padding: 10px 12px;
+    border-radius: 18px;
   }
 
   .brand {
