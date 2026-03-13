@@ -44,6 +44,10 @@
 
     <main id="main">
       <section class="hero" aria-label="The Jointe hero">
+        <div class="hero-media" aria-hidden="true">
+          <img class="hero-media-blur" src="public/assets/hero.png" alt="" loading="eager" />
+          <img class="hero-media-img" src="public/assets/hero.png" alt="" loading="eager" />
+        </div>
         <div class="wrap hero-grid">
           <div class="hero-copy">
             <p class="kicker">THE JOINTE PODCAST</p>
@@ -56,6 +60,18 @@
                 loading="eager"
               />
             </h1>
+
+            <div class="video-embed" aria-label="Featured video">
+              <iframe
+                src="https://www.youtube.com/embed/eVdo1AIda5w?si=OopDq1vF6b6HxXGd"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
             <p class="hero-tagline">
               Where <strong>Sports</strong>, <strong>Movies</strong>, and
               <strong>“The More”</strong> connect.
@@ -82,47 +98,6 @@
             </div>
           </div>
 
-          <aside class="hero-icons" aria-label="Show icons">
-            <div class="icon-stack">
-              <div class="icon-card" aria-label="Basketball icon">
-                <svg viewBox="0 0 64 64" role="img" aria-hidden="true" class="icon">
-                  <circle cx="32" cy="32" r="22" class="i-stroke" />
-                  <path d="M12 32h40M32 10v44" class="i-stroke" stroke-linecap="round" />
-                  <path
-                    d="M17 17c8 7 8 23 0 30M47 17c-8 7-8 23 0 30"
-                    class="i-stroke"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-              <div class="icon-card" aria-label="Vintage film camera icon">
-                <svg viewBox="0 0 64 64" role="img" aria-hidden="true" class="icon">
-                  <rect x="14" y="24" width="30" height="22" rx="4" class="i-stroke" />
-                  <path d="M44 30l10-6v22l-10-6z" class="i-fill" />
-                  <circle cx="22" cy="22" r="6" class="i-stroke" />
-                  <circle cx="34" cy="20" r="5" class="i-stroke" />
-                  <path d="M18 52h26" class="i-stroke" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div class="icon-card" aria-label="Condenser microphone icon">
-                <svg viewBox="0 0 64 64" role="img" aria-hidden="true" class="icon">
-                  <rect x="24" y="10" width="16" height="28" rx="8" class="i-stroke" />
-                  <path
-                    d="M20 28v2c0 8 6 14 12 14s12-6 12-14v-2"
-                    class="i-stroke"
-                    stroke-linecap="round"
-                  />
-                  <path d="M32 44v8" class="i-stroke" stroke-linecap="round" />
-                  <path d="M22 52h20" class="i-stroke" stroke-linecap="round" />
-                  <path
-                    d="M27 16h10M27 20h10M27 24h10M27 28h10"
-                    class="i-stroke i-fine"
-                    stroke-linecap="round"
-                  />
-                </svg>
-              </div>
-            </div>
-          </aside>
         </div>
       </section>
 
@@ -249,34 +224,6 @@
           </div>
 
           <div class="merch-grid">
-            <article class="merch">
-              <div class="merch-media" aria-hidden="true">
-                <img src="public/assets/merch-shirt.svg" alt="" width="520" height="360" loading="lazy" />
-              </div>
-              <div class="merch-body">
-                <h3 class="merch-title">Logo Tee</h3>
-                <p class="merch-desc">Soft, heavyweight cotton in deep green with a vintage ink print.</p>
-                <div class="merch-actions">
-                  <a class="btn btn-cream" href="#">Shop tees</a>
-                  <a class="btn btn-ghost" href="#">Size guide</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="merch">
-              <div class="merch-media" aria-hidden="true">
-                <img src="public/assets/merch-hat.svg" alt="" width="520" height="360" loading="lazy" />
-              </div>
-              <div class="merch-body">
-                <h3 class="merch-title">Dad Hat</h3>
-                <p class="merch-desc">Low profile, relaxed fit — made for postgame walks and late-night rewatches.</p>
-                <div class="merch-actions">
-                  <a class="btn btn-cream" href="#">Shop hats</a>
-                  <a class="btn btn-ghost" href="#">Shipping</a>
-                </div>
-              </div>
-            </article>
-
             <article class="merch">
               <div class="merch-media" aria-hidden="true">
                 <img src="public/assets/merch-beanie.png" alt="" width="520" height="360" loading="lazy" />
