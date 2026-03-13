@@ -1,0 +1,39 @@
+{
+  "episodes": [
+    {
+      "ep": "48",
+      "title": "The Crossover: March Madness & Movie Brackets",
+      "desc": "Bracket chaos, buzzer beaters, and the best tournament films.",
+      "videoUrl": "https://www.youtube.com/@TheJointe",
+      "thumb": "public/assets/episodes/thumb-01.png"
+    },
+    {
+      "ep": "47",
+      "title": "Rewatchables: Underdog Sports Movies",
+      "desc": "The cinematic playbook of grit, heart, and iconic locker-room speeches.",
+      "videoUrl": "https://www.youtube.com/@TheJointe",
+      "thumb": "public/assets/episodes/thumb-02.png"
+    },
+    {
+      "ep": "46",
+      "title": "Sound & Fury: Iconic Sports Commentary",
+      "desc": "Calls that became culture — plus our favorite “you can’t script this” moments.",
+      "videoUrl": "https://www.youtube.com/@TheJointe",
+      "thumb": "public/assets/episodes/thumb-03.png"
+    },
+    {
+      "ep": "45",
+      "title": "The More: Collectibles, Posters, and Stadium Snacks",
+      "desc": "A nostalgia draft of the little things that make the big moments feel bigger.",
+      "videoUrl": "https://www.youtube.com/@TheJointe",
+      "thumb": "public/assets/episodes/thumb-04.png"
+    },
+    {
+      "ep": "44",
+      "title": "Latest Upload",
+      "desc": "New drop from The Jointe — tap to watch on YouTube.",
+      "videoUrl": "https://www.youtube.com/@TheJointe",
+      "thumb": "public/assets/episodes/thumb-05.png"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="120" viewBox="0 0 360 120" role="img" aria-label="The Jointe logo">
+  <defs>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="360" height="120" fill="none" />
+  <g filter="url(#shadow)" fill="#0b0f0c">
+    <path d="M40 78c20-30 58-50 104-50 50 0 92 20 116 52-18-10-44-18-76-18-36 0-70 10-94 28-18 12-34 18-50 18-13 0-24-4-30-10z" opacity="0.12" />
+  </g>
+  <g fill="#0b0f0c">
+    <text x="34" y="46" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" letter-spacing="2">THE</text>
+    <text x="34" y="92" font-family="Georgia, 'Times New Roman', serif" font-weight="900" font-size="64" letter-spacing="1">Jointe</text>
+    <path d="M270 78c14 0 26 2 38 6-10 8-22 12-36 12-12 0-22-3-32-8 10-6 18-10 30-10z" opacity="0.65" />
+    <path d="M44 98c30 16 62 18 96 6" fill="none" stroke="#0b0f0c" stroke-width="5" stroke-linecap="round" opacity="0.7" />
+  </g>
+</svg>
+
