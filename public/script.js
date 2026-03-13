@@ -1,4 +1,59 @@
 (() => {
+  const menuToggle = document.querySelector(".js-menu-toggle");
+  const menuPanel = document.querySelector(".js-menu-panel");
+  const spotifyEmbed = document.querySelector(".spotify-embed");
+  const spotifyNote = document.querySelector(".menu-spotify-note");
+
+  const normalizeSpotifyEmbedUrl = (value) => {
+    const raw = String(value || "").trim();
+    if (!raw) return "";
+    if (raw.includes("open.spotify.com/embed/")) return raw;
+    if (raw.includes("open.spotify.com/")) {
+      return raw.replace("open.spotify.com/", "open.spotify.com/embed/");
+    }
+    return raw;
+  };
+
+  const setMenuOpen = (open) => {
+    if (!(menuToggle instanceof HTMLButtonElement)) return;
+    if (!menuPanel) return;
+    menuPanel.hidden = !open;
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  if (menuToggle && menuPanel) {
+    menuToggle.addEventListener("click", () => {
+      setMenuOpen(menuPanel.hidden);
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (menuPanel.hidden) return;
+      if (target.closest(".js-menu-toggle")) return;
+      if (target.closest(".js-menu-panel")) return;
+      setMenuOpen(false);
+    });
+
+    menuPanel.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (target.closest("a")) setMenuOpen(false);
+    });
+  }
+
+  if (spotifyEmbed instanceof HTMLIFrameElement) {
+    const embedUrl = normalizeSpotifyEmbedUrl(spotifyEmbed.dataset.spotifyEmbed);
+    if (embedUrl) {
+      spotifyEmbed.src = embedUrl;
+      spotifyEmbed.hidden = false;
+      if (spotifyNote) spotifyNote.hidden = true;
+    } else {
+      spotifyEmbed.hidden = true;
+      if (spotifyNote) spotifyNote.hidden = false;
+    }
+  }
+
   const player = document.querySelector(".player");
   const playerTitle = document.getElementById("playerTitle");
   const closeBtn = document.querySelector(".js-player-close");
@@ -147,6 +202,7 @@
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       setPlayerOpen(false);
+      setMenuOpen(false);
       document
         .querySelectorAll(".episode.is-playing")
         .forEach((el) => el.classList.remove("is-playing"));
