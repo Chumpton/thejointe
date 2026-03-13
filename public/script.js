@@ -22,7 +22,7 @@
     if (!episodeRow) return;
     const safeEpisodes = Array.isArray(episodes) ? episodes : [];
     episodeRow.innerHTML = safeEpisodes
-      .slice(0, 12)
+      .slice(0, 6)
       .map((ep) => {
         const epNum = escapeHtml(ep?.ep ?? "");
         const title = escapeHtml(ep?.title ?? "Episode");
@@ -37,16 +37,38 @@
               <div class="thumb-media">
                 <img class="thumb-img" src="${thumb}" alt="${label} thumbnail" loading="lazy" />
               </div>
-              <div class="thumb-badge">${label}</div>
+              <div class="thumb-badge">
+                <span class="thumb-badge-text">${label}</span>
+                <span class="thumb-playing" aria-hidden="true">
+                  <span></span><span></span><span></span>
+                </span>
+              </div>
             </a>
             <div class="episode-meta">
               <h3 class="episode-title">${title}</h3>
               <p class="episode-desc">${desc}</p>
               <div class="episode-actions">
-                <button class="btn btn-ink js-play" data-ep="${epNum}" data-title="${title}">
+                <button class="btn btn-ink js-play" type="button" data-ep="${epNum}" data-title="${title}">
                   <span class="btn-ic" aria-hidden="true">▶</span> Play
                 </button>
-                <button class="btn btn-ghost js-save" data-ep="${epNum}">Save</button>
+                <button
+                  class="icon-btn js-save"
+                  type="button"
+                  data-ep="${epNum}"
+                  aria-pressed="false"
+                  aria-label="Save ${label}: ${title}"
+                  title="Save"
+                >
+                  <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                    <path
+                      d="M7 4h10a1 1 0 0 1 1 1v16l-6-3-6 3V5a1 1 0 0 1 1-1z"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </article>
@@ -97,21 +119,37 @@
       const title = playBtn.getAttribute("data-title") || "Episode";
       if (playerTitle) playerTitle.textContent = title;
       setPlayerOpen(true);
+
+      const episode = playBtn.closest(".episode");
+      document
+        .querySelectorAll(".episode.is-playing")
+        .forEach((el) => el.classList.remove("is-playing"));
+      episode?.classList.add("is-playing");
       return;
     }
 
     const saveBtn = target.closest(".js-save");
     if (saveBtn) {
       const ep = saveBtn.getAttribute("data-ep") || "";
-      const saved = saveBtn.textContent === "Saved";
-      saveBtn.textContent = saved ? "Save" : "Saved";
+      const saved = saveBtn.getAttribute("aria-pressed") === "true";
       saveBtn.setAttribute("aria-pressed", saved ? "false" : "true");
-      saveBtn.title = ep ? `Episode ${ep}` : "Episode";
+      saveBtn.title = saved ? "Save" : "Saved";
+      saveBtn.setAttribute("aria-label", `${saved ? "Save" : "Saved"} ${ep ? `Ep. ${ep}` : "Episode"}`);
     }
   });
 
-  closeBtn?.addEventListener("click", () => setPlayerOpen(false));
+  closeBtn?.addEventListener("click", () => {
+    setPlayerOpen(false);
+    document
+      .querySelectorAll(".episode.is-playing")
+      .forEach((el) => el.classList.remove("is-playing"));
+  });
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setPlayerOpen(false);
+    if (event.key === "Escape") {
+      setPlayerOpen(false);
+      document
+        .querySelectorAll(".episode.is-playing")
+        .forEach((el) => el.classList.remove("is-playing"));
+    }
   });
 })();

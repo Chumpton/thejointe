@@ -61,6 +61,41 @@
               </span>
               <span class="sr-only">Contact</span>
             </a>
+
+            <span class="nav-divider" aria-hidden="true"></span>
+
+            <a
+              class="nav-link nav-social"
+              href="https://open.spotify.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="nav-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M7.5 10.2c3.6-1.1 7.2-.8 10.6.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+                  <path d="M8.2 13c3-0.8 5.9-0.5 8.6 0.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+                  <path d="M8.8 15.7c2.2-0.5 4.3-0.3 6.1 0.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.75" />
+                </svg>
+              </span>
+              <span class="sr-only">Spotify</span>
+            </a>
+
+            <a
+              class="nav-link nav-social"
+              href="https://instagram.com/thejointe"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="nav-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M8.2 2.8h7.6c2.96 0 5.4 2.44 5.4 5.4v7.6c0 2.96-2.44 5.4-5.4 5.4H8.2c-2.96 0-5.4-2.44-5.4-5.4V8.2c0-2.96 2.44-5.4 5.4-5.4z" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M12 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z" fill="none" stroke="currentColor" stroke-width="2" />
+                  <path d="M17.5 6.5h.01" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span class="sr-only">Instagram</span>
+            </a>
           </nav>
         </div>
       </div>
@@ -70,15 +105,12 @@
       <section class="hero" aria-label="The Jointe hero">
         <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="kicker">THE JOINTE PODCAST</p>
-            <h1 class="hero-title">
-              <span class="sr-only">The Jointe</span>
-            </h1>
+            <h1 class="sr-only">The Jointe Podcast</h1>
 
             <div class="hero-art" aria-hidden="true">
               <img
                 class="hero-art-img"
-                src="public/assets/hero.png"
+                src="public/assets/hero-gemini.png"
                 alt=""
                 loading="eager"
               />
@@ -94,30 +126,6 @@
                 allowfullscreen
                 loading="lazy"
               ></iframe>
-            </div>
-            <p class="hero-tagline">
-              Where <strong>Sports</strong>, <strong>Movies</strong>, and
-              <strong>“The More”</strong> connect.
-            </p>
-
-            <div class="hero-cta">
-              <a class="btn btn-cream" href="#episodes">Listen to the latest</a>
-              <a class="btn btn-ghost" href="#topics">Explore topics</a>
-            </div>
-
-            <div class="hero-stats" aria-label="Show quick stats">
-              <div class="stat">
-                <div class="stat-top">Weekly</div>
-                <div class="stat-bottom">Drops</div>
-              </div>
-              <div class="stat">
-                <div class="stat-top">3</div>
-                <div class="stat-bottom">Pillars</div>
-              </div>
-              <div class="stat">
-                <div class="stat-top">Retro</div>
-                <div class="stat-bottom">Vibes</div>
-              </div>
             </div>
           </div>
 
@@ -175,67 +183,6 @@
             }
           </script>
           <div class="episode-row" id="episodeRow" role="list" aria-label="Episode list"></div>
-        </div>
-      </section>
-
-      <section id="topics" class="section section-topics" aria-label="Explore Topics">
-        <div class="wrap">
-          <div class="section-head">
-            <h2>Explore Topics</h2>
-            <p class="subhead">Distinct lanes, one vibe: retro athletic meets vintage cinema.</p>
-          </div>
-
-          <div class="topic-grid">
-            <a class="topic" href="#" aria-label="Explore Sports topics">
-              <div class="topic-ic" aria-hidden="true">
-                <svg viewBox="0 0 64 64" class="icon">
-                  <circle cx="28" cy="30" r="16" class="i-stroke" />
-                  <path d="M12 30h32M28 14v32" class="i-stroke" stroke-linecap="round" />
-                  <path d="M44 42l12 10" class="i-stroke" stroke-linecap="round" />
-                  <path d="M44 40l-8 2 2-8 12-10 6 6z" class="i-fill" />
-                </svg>
-              </div>
-              <div class="topic-body">
-                <div class="topic-title">Sports</div>
-                <div class="topic-desc">Hoops, highlights, drafts, and deep cuts.</div>
-              </div>
-              <span class="topic-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="topic" href="#" aria-label="Explore Movies topics">
-              <div class="topic-ic" aria-hidden="true">
-                <svg viewBox="0 0 64 64" class="icon">
-                  <rect x="14" y="22" width="30" height="22" rx="4" class="i-stroke" />
-                  <path d="M44 30l12-6v22l-12-6z" class="i-fill" />
-                  <path d="M18 18h22" class="i-stroke" stroke-linecap="round" />
-                  <path d="M18 48h22" class="i-stroke" stroke-linecap="round" />
-                  <path d="M24 16l2 6M30 16l2 6M36 16l2 6" class="i-stroke i-fine" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div class="topic-body">
-                <div class="topic-title">Movies</div>
-                <div class="topic-desc">Classics, directors, and the perfect double feature.</div>
-              </div>
-              <span class="topic-arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="topic" href="#" aria-label="Explore The More topics">
-              <div class="topic-ic" aria-hidden="true">
-                <svg viewBox="0 0 64 64" class="icon">
-                  <rect x="14" y="14" width="20" height="36" rx="3" class="i-stroke" />
-                  <path d="M34 18h16v28H34z" class="i-stroke" />
-                  <path d="M20 22h8M20 28h8M20 34h8" class="i-stroke i-fine" stroke-linecap="round" />
-                  <path d="M42 22h6M42 28h6M42 34h6" class="i-stroke i-fine" stroke-linecap="round" />
-                  <path d="M10 50h44" class="i-stroke" stroke-linecap="round" />
-                </svg>
-              </div>
-              <div class="topic-body">
-                <div class="topic-title">The More</div>
-                <div class="topic-desc">Culture, collectibles, audio gear, and oddities.</div>
-              </div>
-              <span class="topic-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
         </div>
       </section>
 
@@ -304,8 +251,9 @@
         </div>
         <div class="footer-right">
           <a class="text-link" href="#episodes">Episodes</a>
-          <a class="text-link" href="#topics">Topics</a>
           <a class="text-link" href="#merch">Merch</a>
+          <a class="text-link" href="https://open.spotify.com/" target="_blank" rel="noreferrer">Spotify</a>
+          <a class="text-link" href="https://instagram.com/thejointe" target="_blank" rel="noreferrer">Instagram</a>
         </div>
       </div>
     </footer>
