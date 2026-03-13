@@ -53,18 +53,8 @@
       if (spotifyPlaceholder) spotifyPlaceholder.hidden = false;
     }
   }
-
-  const player = document.querySelector(".player");
-  const playerTitle = document.getElementById("playerTitle");
-  const closeBtn = document.querySelector(".js-player-close");
   const episodeRow = document.getElementById("episodeRow");
   const episodesDataEl = document.getElementById("episodesData");
-
-  const setPlayerOpen = (open) => {
-    if (!player) return;
-    player.hidden = !open;
-    document.body?.classList.toggle("player-open", open);
-  };
 
   const escapeHtml = (value) =>
     String(value)
@@ -104,9 +94,9 @@
               <h3 class="episode-title">${title}</h3>
               <p class="episode-desc">${desc}</p>
               <div class="episode-actions">
-                <button class="btn btn-ink js-play" type="button" data-ep="${epNum}" data-title="${title}">
-                  <span class="btn-ic" aria-hidden="true">▶</span> Play
-                </button>
+                <a class="btn btn-ink js-play" href="${videoUrl}" target="_blank" rel="noreferrer">
+                  <span class="btn-ic" aria-hidden="true">▶</span> Watch
+                </a>
                 <button
                   class="icon-btn js-save"
                   type="button"
@@ -172,15 +162,6 @@
 
     const playBtn = target.closest(".js-play");
     if (playBtn) {
-      const title = playBtn.getAttribute("data-title") || "Episode";
-      if (playerTitle) playerTitle.textContent = title;
-      setPlayerOpen(true);
-
-      const episode = playBtn.closest(".episode");
-      document
-        .querySelectorAll(".episode.is-playing")
-        .forEach((el) => el.classList.remove("is-playing"));
-      episode?.classList.add("is-playing");
       return;
     }
 
@@ -194,19 +175,9 @@
     }
   });
 
-  closeBtn?.addEventListener("click", () => {
-    setPlayerOpen(false);
-    document
-      .querySelectorAll(".episode.is-playing")
-      .forEach((el) => el.classList.remove("is-playing"));
-  });
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      setPlayerOpen(false);
       setMenuOpen(false);
-      document
-        .querySelectorAll(".episode.is-playing")
-        .forEach((el) => el.classList.remove("is-playing"));
     }
   });
 })();

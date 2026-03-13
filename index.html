@@ -25,15 +25,7 @@
     <header class="site-header">
       <div class="wrap">
         <div class="header-row">
-          <a class="brand" href="#" aria-label="The Jointe home">
-            <img
-              class="brand-mark"
-              src="public/assets/logo.png"
-              alt="The Jointe"
-              loading="eager"
-            />
-            <span class="brand-sub">Podcast</span>
-          </a>
+          <h1 class="sr-only">The Jointe Podcast</h1>
 
           <button
             class="menu-btn js-menu-toggle"
@@ -62,69 +54,6 @@
               Add Spotify embed URL in <code>index.html</code> (search <code>data-spotify-embed</code>).
             </div>
           </div>
-
-          <nav class="nav" aria-label="Primary">
-            <a class="nav-link" href="#episodes">
-              <span class="nav-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M7 6h10M7 12h10M7 18h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-              </span>
-              <span class="sr-only">Episodes</span>
-            </a>
-            <a class="nav-link" href="#merch">
-              <span class="nav-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M8 7l4-3 4 3 3 2-2 4v8H7v-8L5 9l3-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-                </svg>
-              </span>
-              <span class="sr-only">Merch</span>
-            </a>
-            <a class="nav-link" href="#contact">
-              <span class="nav-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M4 7h16v12H4z" fill="none" stroke="currentColor" stroke-width="2" />
-                  <path d="M4 8l8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-              <span class="sr-only">Contact</span>
-            </a>
-
-            <span class="nav-divider" aria-hidden="true"></span>
-
-            <a
-              class="nav-link nav-social"
-              href="https://open.spotify.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span class="nav-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" fill="none" stroke="currentColor" stroke-width="2" />
-                  <path d="M7.5 10.2c3.6-1.1 7.2-.8 10.6.9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.9" />
-                  <path d="M8.2 13c3-0.8 5.9-0.5 8.6 0.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.8" />
-                  <path d="M8.8 15.7c2.2-0.5 4.3-0.3 6.1 0.6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.75" />
-                </svg>
-              </span>
-              <span class="sr-only">Spotify</span>
-            </a>
-
-            <a
-              class="nav-link nav-social"
-              href="https://instagram.com/thejointe"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span class="nav-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                  <path d="M8.2 2.8h7.6c2.96 0 5.4 2.44 5.4 5.4v7.6c0 2.96-2.44 5.4-5.4 5.4H8.2c-2.96 0-5.4-2.44-5.4-5.4V8.2c0-2.96 2.44-5.4 5.4-5.4z" fill="none" stroke="currentColor" stroke-width="2" />
-                  <path d="M12 9c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3z" fill="none" stroke="currentColor" stroke-width="2" />
-                  <path d="M17.5 6.5h.01" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
-                </svg>
-              </span>
-              <span class="sr-only">Instagram</span>
-            </a>
-          </nav>
         </div>
 
         <div class="menu-panel js-menu-panel" id="mobileMenu" hidden>
@@ -295,18 +224,6 @@
         </div>
       </div>
     </footer>
-
-    <div class="player" role="dialog" aria-label="Mini player" aria-modal="false" hidden>
-      <div class="player-inner">
-        <div class="player-left">
-          <div class="player-pill">Now Playing</div>
-          <div class="player-title" id="playerTitle">Episode</div>
-        </div>
-        <div class="player-right">
-          <button class="btn btn-ghost btn-sm js-player-close" type="button">Close</button>
-        </div>
-      </div>
-    </div>
 
     <script src="public/script.js"></script>
   </body>
